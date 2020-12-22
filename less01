@@ -35,18 +35,19 @@ while number >= 1:
 или убыток — издержки больше выручки). Выведите соответствующее сообщение. Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
 Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.---------------------------------------------------------------------
 
-income = int(input('Enter income>>> '))
-expense = int(input('Enter expense>>> '))
+income = int(input('Введите сумму выручки>>> '))
+expense = int(input('Введите сумму издержек>>> '))
 if income > expense:
-    print('Your company is profitable :)')
+    print('Ваша компания прибыльна :)')
     profit = income - expense
-    print('Your profit amount:', profit)
-    employees = int(input('Enter the number of employees>>> '))
-    print('Company profit per employee =', profit / employees)
+    profitability = profit / income * 100
+    print(f' Сумма вашей прибыли составляет: {profit} \n Рентабельность вашей фирмы составляет: {profitability:.2f}%')
+    employees = int(input('Введите численность сотрудников фирмы>>> '))
+    print(f'Прибыль компании в расчете на одного сотрудника составляет: {profit / employees:.2f}')
 elif income == expense:
-    print('Your company has no profitability :/')
+    print('Ваша компания не имеет прибыли :/')
 else:
-    print('Your company is unprofitable :(')
+    print('Ваша компрания убыточна :(')
 
 # ----6. Спортсмен занимается ежедневными пробежками. В первый день его результат составил a километров. Каждый день спортсмен увеличивал результат на 10 % относительно
 предыдущего. Требуется определить номер дня, на который результат спортсмена составит не менее b километров. Программа должна принимать значения параметров a и b и выводить
